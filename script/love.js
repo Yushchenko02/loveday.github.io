@@ -61,7 +61,7 @@ function init() {
   window.addEventListener("resize", function () {
     width = canvas.width = koef * innerWidth;
     height = canvas.height = koef * innerHeight;
-    ctx.fillStyle = "rgba(0,0,0,1)";
+    ctx.fillStyle = "rgba(255,192,203,1)";
     ctx.fillRect(0, 0, width, height);
   });
 
@@ -112,7 +112,7 @@ function init() {
     pulse((1 + n) * 0.5, (1 + n) * 0.5);
     time += (Math.sin(time) < 0 ? 9 : n > 0.8 ? 0.2 : 1) * config.timeDelta;
 
-    ctx.fillStyle = "rgba(0,0,0,.1)";
+    ctx.fillStyle = "rgba(255,192,203,.1)";
     ctx.fillRect(0, 0, width, height);
 
     for (var i = e.length; i--; ) {
@@ -184,4 +184,5 @@ document.addEventListener("DOMContentLoaded", function () {
   init();
   continueMusic();
 });
+
 

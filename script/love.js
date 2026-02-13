@@ -32,12 +32,12 @@ function init() {
   var height = (canvas.height = koef * innerHeight);
   var rand = Math.random;
 
-  ctx.fillStyle = "rgba(0,0,0,1)";
+  ctx.fillStyle = "rgba(255,192,203,1)";
   ctx.fillRect(0, 0, width, height);
 
   function drawText() {
     ctx.font = "60px Arial";
-    ctx.fillStyle = "lightblue";
+    ctx.fillStyle = "hotpink";
     ctx.textAlign = "center";
     ctx.fillText("I love you", width / 2, height / 2.2 + 400);
   }
@@ -99,7 +99,7 @@ function init() {
       q: ~~(rand() * heartPointsCount),
       D: 2 * (i % 2) - 1,
       force: 0.2 * rand() + 0.7,
-      f: "rgba(51, 204, 255, 0.7)",
+      f: "rgba(255, 105, 180, 0.7)",
       trace: Array.from({ length: traceCount }, () => ({ x, y })),
     };
   }
@@ -184,3 +184,4 @@ document.addEventListener("DOMContentLoaded", function () {
   init();
   continueMusic();
 });
+
